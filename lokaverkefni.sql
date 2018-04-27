@@ -47,23 +47,6 @@ CREATE TABLE lagaval
     lag VARCHAR(40),
     dagsetning VARCHAR(8)
 );
-CREATE TABLE tonleikar
-(
-	id INT PRIMARY KEY,
-    flytjendur VARCHAR(40),
-    stadur VARCHAR(40),
-    dagsetning VARCHAR(8),
-    midasala VARCHAR(40),
-    askrifendur_VP VARCHAR(40),
-    dagskra VARCHAR(40)
-);
-CREATE TABLE midasala
-(
-	id INT PRIMARY KEY,
-    fjoldi VARCHAR(40),
-    stadur VARCHAR(40),
-    flytjandi VARCHAR(40),
-    dagsetning VARCHAR(8)
-);
+
 
 
