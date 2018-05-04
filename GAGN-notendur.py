@@ -3,7 +3,7 @@ def skraNotanda(skra):
         with open(skra, "w") as f:
                 nofn = {"Huginn":"Kleppur","Alma":"Breiðholt","Valborg":"Kópavogur","Jon":"Laugardalur","Ingi":"Hafnarfjörður","Gunnar":"Akureyri","Benedikt":"Akranes"}
                 for x,y in nofn.items():
-                        strengur = '("{}","{}","{}","{}"),'.format(x,faedingardag(),netfang(x),y)
+                        strengur = '(NULL,"{}","{}","{}","{}"),'.format(x,faedingardag(),netfang(x),y)
                         f.write(strengur)
 
 def netfang(nafn):
