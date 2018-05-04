@@ -1,0 +1,1 @@
+("Valborg","20031950","Valborg@Valborg.is","Kópavogur"),("Gunnar","26101916","Gunnar@Gunnar.is","Akureyri"),("Ingi","11051984","Ingi@Ingi.is","Hafnarfjörður"),("Huginn","07051957","Huginn@Huginn.is","Kleppur"),("Benedikt","17091938","Benedikt@Benedikt.is","Akranes"),("Alma","25021920","Alma@Alma.is","Breiðholt"),("Jon","11051955","Jon@Jon.is","Laugardalur"),
