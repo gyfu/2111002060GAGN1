@@ -7,17 +7,10 @@ CREATE TABLE flytjandi (
     stofn VARCHAR(256),
     lokadagur VARCHAR(256),
     lysing VARCHAR(256)
-);
-CREATE TABLE lag (
-	lag_ID INT AUTO_INCREMENT PRIMARY KEY,
-	heiti VARCHAR(256),
-    lengd VARCHAR(256),
-    texti VARCHAR(4096),
-    utgafudagur VARCHAR(256)
-);
+    );
 CREATE TABLE tegund (
 	tegund_ID INT AUTO_INCREMENT PRIMARY KEY,
-    nafn VARCHAR(256)
+	nafn VARCHAR(256)
 );
 CREATE TABLE utgefandi (
 	utgefandi_ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -25,10 +18,6 @@ CREATE TABLE utgefandi (
 	netfang VARCHAR(256),
     stadsetning VARCHAR(256)
 );
-#CREATE TABLE listalog (
-#	listalag_PK INT AUTO_INCREMENT PRIMARY KEY,
-#    rod VARCHAR(256)
-#);
 CREATE TABLE notandi (
 	notandi_ID INT AUTO_INCREMENT PRIMARY KEY,
     nafn VARCHAR(256),
@@ -37,40 +26,31 @@ CREATE TABLE notandi (
     heimili VARCHAR(256)
 );
 CREATE TABLE notandalisti (
-	lagaval_ID INT AUTO_INCREMENT PRIMARY KEY,
+	listi_ID INT AUTO_INCREMENT PRIMARY KEY,
     heiti VARCHAR(256),
-    stofndagur VARCHAR(256)
+    stofndagur VARCHAR(256),
+    notandiID INT,
+    CONSTRAINT notandiID_FK FOREIGN KEY (notandiID) REFERENCES notandi(notandi_ID)
 );
-INSERT INTO lag VALUES
-(NULL,"Dancing King","06:46","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","20091988"),(NULL,"Schoolbag on leg","10:56","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","05061971"),(NULL,"Cash cash cash","03:11","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","31052015"),(NULL,"Gerpi","08:52","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","13051986"),(NULL,"Flýja","10:07","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","19071976"),(NULL,"Útruninn","10:49","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","13031980"),(NULL,"Young","06:04","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","19032008"),(NULL,"Drugs","05:54","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","08072015"),(NULL,"Choke","05:43","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","23061984"),(NULL,"Speedy automobile","01:24","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","21071993"),(NULL,"Ticket out of here","02:24","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","05032010"),(NULL,"Body too young to be looking like this","09:15","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","03011998"),(NULL,"Y","05:39","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","13051978"),(NULL,"Legs don't work","07:38","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","11071987"),(NULL,"Nice vest","02:54","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","21122014"),(NULL,"Skeleton","02:25","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","23082013"),(NULL,"Family","05:35","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","29041979"),(NULL,"Dreams","04:34","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","09051989"),(NULL,"Ice Techno Hip hop","06:49","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","14121970"),(NULL,"Green collar","03:12","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","15062011"),(NULL,"Late night obssession","07:55","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","27071970"),(NULL,"Warpig","02:00","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","01122015"),(NULL,"Serpent","09:58","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","27112000"),(NULL,"Great Mexico","08:11","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","19101979"),(NULL,"Skinny fists","09:17","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","27031985"),(NULL,"Antlers","10:21","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","24121995"),(NULL,"Rosey Island","04:45","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","23081981"),(NULL,"Confession","10:55","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","17041985"),(NULL,"Real Thing","04:50","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","29111973"),(NULL,"Walk","08:40","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","15092003");
-INSERT INTO flytjandi VALUES
-(NULL,"BAAB","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Elskari","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Son","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Tracy Chapstick","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Edward Heran","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Rasberries","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Joseph Lowhole","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"This wont make you","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Devilslow I, white peasant","05061971","31052015","Lorem Ipsum Dolor Sit Amet"),
-(NULL,"Foo Pacifists","05061971","31052015","Lorem Ipsum Dolor Sit Amet");
-INSERT INTO tegund VALUES
-(NULL,"Pop"),
-(NULL,"Rokk"),
-(NULL,"Indie"),
-(NULL,"Instrumental"),
-(NULL,"90's");
-INSERT INTO notandi VALUES
-(NULL,"Valborg","20031950","Valborg@Valborg.is","Kópavogur"),(NULL,"Gunnar","26101916","Gunnar@Gunnar.is","Akureyri"),(NULL,"Ingi","11051984","Ingi@Ingi.is","Hafnarfjörður"),(NULL,"Huginn","07051957","Huginn@Huginn.is","Kleppur"),(NULL,"Benedikt","17091938","Benedikt@Benedikt.is","Akranes"),(NULL,"Alma","25021920","Alma@Alma.is","Breiðholt"),(NULL,"Jon","11051955","Jon@Jon.is","Laugardalur");
-INSERT INTO utgefandi VALUES
-(NULL,"Vynil","vynil@vynil.co.uk","London"),
-(NULL,"RealRecords","real@records.us","Boston"),
-(NULL,"BestSongs","best@songs.com","New York"),
-(NULL,"OldGold","old@gold.us","Dublin"),
-(NULL,"GeislaDiskó","geisla@diskó.is","Reykjavík");
-INSERT INTO notandalisti VALUES
-(NULL,"playlist1","01062018"),(NULL,"playlist2","01032018"),(NULL,"playlist3","19122018"),(NULL,"playlist4","14032018"),(NULL,"playlist5","08122018"),(NULL,"playlist1","26022018"),(NULL,"playlist2","05102018"),(NULL,"playlist3","15112018"),(NULL,"playlist4","22082018"),(NULL,"playlist5","24072018"),(NULL,"playlist1","08072018"),(NULL,"playlist2","21052018"),(NULL,"playlist3","21042018"),(NULL,"playlist4","20112018"),(NULL,"playlist5","18082018"),(NULL,"playlist1","19082018"),(NULL,"playlist2","18012018"),(NULL,"playlist3","14102018"),(NULL,"playlist4","01072018"),(NULL,"playlist5","29012018"),(NULL,"playlist1","14032018"),(NULL,"playlist2","08022018"),(NULL,"playlist3","22072018"),(NULL,"playlist4","09092018"),(NULL,"playlist5","09042018");
-
-
-
+CREATE TABLE lag (
+	lag_ID INT AUTO_INCREMENT PRIMARY KEY,
+	heiti VARCHAR(256),
+    lengd VARCHAR(256),
+    texti VARCHAR(4096),
+    utgafudagur VARCHAR(256),
+    tegundID INT,
+	utgefandiID INT,
+    flytjandiID INT,
+    CONSTRAINT tegundID_FK FOREIGN KEY (tegundID) REFERENCES tegund(tegund_ID),
+    CONSTRAINT utgefandiID_FK FOREIGN KEY (utgefandiID) REFERENCES utgefandi(utgefandi_ID),
+    CONSTRAINT flytjandiID_FK FOREIGN KEY (flytjandiID) REFERENCES flytjandi(flytjandi_ID)
+);
+CREATE TABLE listalog (
+	listalag_ID INT AUTO_INCREMENT PRIMARY KEY,
+    rod  INT,
+    listiID INT,
+    lagID INT,
+    CONSTRAINT listiID_FK FOREIGN KEY (listiID) REFERENCES notandalisti(listi_ID),
+    CONSTRAINT lagID_FK FOREIGN KEY (lagID) REFERENCES lag(lag_ID)
+);
 
